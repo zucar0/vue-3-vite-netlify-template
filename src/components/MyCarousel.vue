@@ -168,7 +168,6 @@ onBeforeUnmount(() => {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -176,7 +175,6 @@ onBeforeUnmount(() => {
 .slide-image {
   width: 100%;
   height: 600px;
-  border-radius: 8px;
 }
 
 .slide-content {

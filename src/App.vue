@@ -3,12 +3,13 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import MyCarousel from './components/MyCarousel.vue';
+import NavBar from './components/NavBar.vue';
 
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+    <NavBar />
+    <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
     <MyCarousel />
 </template>
 
