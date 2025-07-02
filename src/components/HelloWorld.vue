@@ -23,7 +23,7 @@ const count = ref(0)
       Vite Documentation
     </a>
     |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation Test</a>
   </p>
 
   <button type="button" @click="count++">count is: {{ count }}</button>
