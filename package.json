@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "vue": "^3.2.25"
   },
   "devDependencies": {
