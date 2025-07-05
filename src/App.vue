@@ -4,16 +4,20 @@
 import HelloWorld from './components/HelloWorld.vue'
 import MyCarousel from './components/MyCarousel.vue';
 import NavBar from './components/NavBar.vue';
-
+import Destinations from './components/Destinations.vue';
+import Promotions from './components/Promotions.vue';
 </script>
 
 <template>
     <NavBar />
     <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
     <MyCarousel />
+    <Destinations/>
+    <Promotions/>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,6 +25,5 @@ import NavBar from './components/NavBar.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

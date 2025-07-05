@@ -104,8 +104,10 @@
       >
         <img :src="slide.image" :alt="slide.title" class="slide-image" />
         <div class="slide-content">
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.text }}</p>
+          <h3 class="playfair-display-hero hero">{{ slide.title }}</h3>
+          <button>
+            <p >{{ slide.text }}</p>
+          </button>  
         </div>
       </div>
     </div>
@@ -119,20 +121,23 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import KeenSlider from 'keen-slider'
+import img1 from '../assets/slide/1.png'
+import img2 from '../assets/slide/2.png'
+import img3 from '../assets/slide/3.png'
 
 const slides = [
   {
-    image: 'https://picsum.photos/id/37/2000/1333',
-    title: 'Slide Uno',
-    text: 'Este es el contenido del primer slide.',
+    image: img1,
+    title: 'Explora el mundo con nosotros',
+    text: 'Reserva tu viaje',
   },
   {
-    image: 'https://picsum.photos/id/124/3504/2336',
+    image: img2,
     title: 'Slide Dos',
     text: 'Texto del segundo slide.',
   },
   {
-    image: 'https://picsum.photos/id/234/2048/2048',
+    image: img3,
     title: 'Slide Tres',
     text: 'Contenido del tercer slide.',
   },
@@ -159,6 +164,123 @@ onBeforeUnmount(() => {
 <style scoped>
 @import 'keen-slider/keen-slider.min.css';
 
+.playfair-display-hero {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 .navigation-wrapper {
   position: relative;
 }
@@ -174,21 +296,40 @@ onBeforeUnmount(() => {
 
 .slide-image {
   width: 100%;
-  height: 600px;
+  height: 910px;
+  object-fit: cover;
+  display: block;
 }
 
 .slide-content {
   padding: 1rem;
-  text-align: center;
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  width: 70%;
+}
+
+.slide-content button {
+  border-radius: 10px;
+  border: 1px solid #EFB7AC;
+  background: #EFB7AC;
+  color: white;
 }
 
 .slide-content h3 {
-  margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
 
+.slide-content h3.hero {
+  font-size: 3.25rem;
+  width: 50%;
+  font-weight: bold;
+  color: #EFB7AC;
+}
+
 .slide-content p {
-  color: #555;
+  color: white;
+  padding: 1px 10px;
 }
 
 /* Flechas estilizadas */
@@ -197,7 +338,7 @@ onBeforeUnmount(() => {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5rem;
-  color: #fff;
+  color: #EFB7AC;
   padding: 0.25rem 0.6rem;
   border-radius: 50%;
   cursor: pointer;
