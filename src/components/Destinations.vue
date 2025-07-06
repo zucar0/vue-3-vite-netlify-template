@@ -84,6 +84,7 @@ const destinations = [
 
     .destinations .destine-image{
         border-radius: 20px;
+        max-width: 300px;
     }
 
     .destinations div.subtitle{
